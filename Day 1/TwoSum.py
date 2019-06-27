@@ -8,3 +8,8 @@ def two_sum(lst, k):
             return True
         seen.add(num)
     return False
+
+lst=list()
+lst.extend([1,2,3])
+k=2
+print(two_sum(lst,k))
