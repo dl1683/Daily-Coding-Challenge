@@ -13,7 +13,7 @@ def threeSum(arr,target):
         while(left<right):
             sum=arr[left]+arr[right]+arr[i]
             if(sum==target):
-                trips.append(arr[left],arr[right],arr[i])
+                trips.append([arr[left],arr[right],arr[i]])
                 left+=1
                 right-=1
             elif(sum>target):
@@ -22,3 +22,7 @@ def threeSum(arr,target):
                 left+=1
     
     return trips
+
+arr=[7,6,4,-1,1,2,9,11]
+target=16
+print(threeSum(arr,target))

@@ -18,7 +18,7 @@ def fourNumberSum(arr,target):
                     print(pair,pairs[diff],diff)
                     quads.append(pair+([arr[i],arr[j]]))
                     #"""
-        for k in range(0,i):
+        for k in range(0,i): #make sure there is no repititon
             cSum=arr[k]+arr[i]
             if not cSum in pairs:
                 #add the sum to possible sum pairs
@@ -30,6 +30,7 @@ def fourNumberSum(arr,target):
                 print("At sum: ",cSum," pairs[cSum]=",pairs[cSum])
 
     return quads
+
 
 
 arr=[7,6,4,-1,1,2,9,11]
