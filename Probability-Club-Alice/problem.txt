@@ -1,0 +1,33 @@
+This problem was asked by Two Sigma.
+
+Alice wants to join her school's Probability Student Club. 
+Membership dues are computed via one of two simple probabilistic games.
+
+The first game: roll a die repeatedly. Stop rolling once you get a five followed by a six. 
+Your number of rolls is the amount you pay, in dollars.
+
+The second game: same, except that the stopping condition is a five followed by a five.
+
+Which of the two games should Alice elect to play? Does it even matter? 
+Write a program to simulate the two games and calculate their expected value.
+
+
+Soln:
+
+For 5-5: 
+E(5-5) = 1 + 1/6 * E(5-5|5) + 5/6 * E(5-5)
+
+E(5-5|5) = 1 + 1/6 * 0 + 5/6 * E(5-5)
+
+For the five six:
+
+E(5-6) = 1 + 1/6 * E(5-6|5) + 5/6 * E(5-6)
+
+E(5-6|5) = 1 + 1/6 * 0 + 1/6 E(5-6|5) + 4/6 * E(5-6)
+
+x= 1+1/6* (1 + 1/6 * 0 + 5/6 * x)+5/6*x
+y= 1+ 1/6*z + 5/6*y
+z=1+ 1/6*0+ 1/6z+ 4/6*y
+
+y=36
+x=42
